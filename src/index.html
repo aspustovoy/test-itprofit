@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Itprofit Family в поиске классного Front-end Developer">
+  <title>Test Itprofit</title>
+</head>
+
+<body class="page__body">
+  <div class="site-container">
+    <main class="main">
+      <section class="hero">
+        <div class="hero__container container">
+          <div class="hero__content flex">
+            <div class="hero__left">
+              <h1 class="hero__title">Тестовое задание itprofit</h1>
+              <p class="hero__text">Форма обратной связи в модальном окне</p><button aria-label="sale button"
+                class="hero__button btn btn--fill btn-reset" id="openModalBtn">Форма обратной связи <svg
+                  viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="44" height="44" rx="22" fill="white" />
+                  <rect x="4" y="4" width="36" height="36" rx="18" fill="white" />
+                  <path d="M17 17H27V27" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M17 27L27 17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg></button>
+            </div>
+            <div class="hero__img">
+              <picture>
+                <source media="(max-width: 376px)" srcset="images/content/hero_img1_375.webp" type="image/webp">
+                <source media="(max-width: 769px)" srcset="images/content/hero_img1_768.webp" type="image/webp">
+                <source media="(max-width: 1441px)" srcset="images/content/hero_img1_1440.webp" type="image/webp"><img
+                  src="images/content/hero_img1_1920.webp" alt="background image">
+              </picture>
+            </div>
+          </div>
+          <div class="modal-overlay">
+            <div class="modal">
+              <div class="modal__content"><button class="modal__close btn-reset" id="closeModalBtn"><svg width="24"
+                    height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18" stroke="black" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M6 6L18 18" stroke="black" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg></button>
+                <div id="modalBody" class="modal__body">
+                  <h2 class="modal__title">Форма обратной связи</h2>
+                  <form novalidate id="modalForm" class="modal__form">
+                    <input class="modal__input" type="text" id="name" name="name" placeholder="Имя" autocomplete="off">
+                    <span class="error"></span>
+                    <input class="modal__input" type="email" id="email" name="email" placeholder="Email"
+                      autocomplete="off">
+                    <span class="error"></span>
+                    <input class="modal__input" type="text" id="phone" name="phone" placeholder="Телефон"
+                      autocomplete="off">
+                    <span class="error"></span>
+                    <textarea class="modal__input" type="textarea" id="message" name="message"
+                      placeholder="Сообщение"></textarea>
+                    <span class="error"></span>
+                    <button class="modal__btn btn-reset btn btn--fill" type="submit">Отправить</button>
+                    <span class="error" id="responseMessage"></span>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>

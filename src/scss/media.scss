@@ -1,0 +1,108 @@
+@use 'base/vars' as *;
+
+@media (max-width:1441px) {
+  .hero {
+    &__left {
+      padding: 105px 72px;
+      width: 50%
+    }
+
+    &__title {
+      font-size: 26px
+    }
+
+    &__button {
+      position: relative;
+      z-index: 10
+    }
+  }
+}
+
+@media (max-width:769px) {
+  .container {
+    padding: 24px;
+    max-width: $container-width-for-tablet
+  }
+
+  .hero {
+    &__content {
+      flex-direction: column;
+      min-height: auto;
+    }
+
+    &__left {
+      padding: 24px;
+      width: 100%
+    }
+
+    &__title {
+      font-size: 20px
+    }
+
+    &__text {
+      margin-bottom: 24px;
+      width: 100%;
+      font-size: 15px
+    }
+
+    &__button {
+      width: 261px
+    }
+
+    &__button svg {
+      width: 36px;
+      height: 36px
+    }
+  }
+
+  .btn {
+    font-size: 15px
+  }
+}
+
+@media (max-width:376px) {
+  .container {
+    padding: 14px 24px;
+    max-width: $container-width-for-mobile
+  }
+
+  .hero {
+    &__left {
+      padding-bottom: 18px
+    }
+
+    &__title {
+      margin-bottom: 14px;
+      font-size: 17px
+    }
+
+    &__text {
+      margin-bottom: 18px;
+      font-size: 13px
+    }
+
+    &__button {
+      width: 100%
+    }
+  }
+}
+
+@media (any-hover:hover) {
+  .btn:hover {
+    color: $white;
+    border-color: $brilliant-azure;
+    background-color: $brilliant-azure
+  }
+
+  .btn:hover svg path {
+    stroke: $brilliant-azure
+  }
+
+  .modal__input:hover {
+    border-color: $brilliant-azure
+  }
+
+  .modal__close:hover {
+    background-color: $brilliant-azure
+  }
+}

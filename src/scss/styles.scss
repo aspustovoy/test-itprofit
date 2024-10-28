@@ -1,0 +1,296 @@
+@use 'base/vars' as *;
+
+html {
+  box-sizing: border-box
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit
+}
+
+.page {
+  height: 100%;
+  font-family: $font-family;
+}
+
+.page__body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100%;
+  font-size: 16px
+}
+
+img {
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover
+}
+
+a {
+  text-decoration: none
+}
+
+.site-container {
+  overflow: hidden
+}
+
+.is-hidden {
+  display: none
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+.input-reset {
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  background-color: #fff
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0)
+}
+
+.container {
+  margin: 0 auto;
+  padding: 40px 36px;
+  max-width: $container-width-for-desktop
+}
+
+.flex {
+  display: flex
+}
+
+.centered {
+  text-align: center
+}
+
+.stop-scroll {
+  overflow: hidden
+}
+
+.hero {
+
+  &__content {
+    min-height: 455px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: $alice-blue
+  }
+
+  &__left {
+    padding: 102px 72px;
+    width: 50.6%
+  }
+
+  &__title {
+    margin: 0 0 18px;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 160%;
+    color: $primary
+  }
+
+  &__text {
+    margin: 0 0 36px;
+    max-width: 511px;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 160%;
+    color: $secondary
+  }
+
+  &__button {
+    width: 341px
+  }
+
+  &__button svg {
+    width: 44px;
+    height: 44px
+  }
+
+  &__button svg path {
+    stroke: $dark-blue;
+    transition: stroke .3s ease-in-out
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 12px 12px 24px;
+  border-radius: 60px;
+  border: 1px solid #244c98;
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 160%;
+  color: #244c98;
+  background-color: transparent;
+  transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out;
+  cursor: pointer
+}
+
+.btn:focus {
+  outline: 0;
+  border-color: $brilliant-azure;
+  background-color: $brilliant-azure
+}
+
+.btn:focus svg path {
+  stroke: $brilliant-azure
+}
+
+.btn:active {
+  color: $white;
+  border-color: $brilliant-azure;
+  background-color: $brilliant-azure
+}
+
+.btn--fill {
+  color: $white;
+  background-color: $dark-blue
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  overflow: auto;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, .3);
+  opacity: 0;
+  transition: .5s ease-in-out
+}
+
+.modal {
+  position: relative;
+  display: none;
+  min-height: 575px;
+  max-width: 90%;
+
+  &__content {
+    padding: 80px 24px 24px;
+    max-width: 500px;
+    background-color: #f0f4fc
+  }
+
+  &__title {
+    margin: 0 0 18px;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 24px;
+    color: #323232
+  }
+
+  &__input {
+    padding: 24px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    width: 100%;
+    background: #d7e2f6;
+    transition: border-color .3s ease-in-out
+  }
+
+  &__input:focus {
+    outline: 0;
+    border-color: $brilliant-azure
+  }
+
+  &__input:active {
+    border-color: $brilliant-azure
+  }
+
+  &__input:nth-child(4) {
+    max-width: 452px;
+    min-height: 65px;
+  }
+
+  &__input::placeholder {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 18px;
+    color: #1f4284
+  }
+
+  &__btn {
+    margin-bottom: 4px;
+    padding: 18px 12px;
+    justify-content: center;
+    border-radius: 4px;
+    width: 100%
+  }
+
+  &__close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    border-radius: 10px;
+    padding: 14px;
+    width: 52px;
+    height: 52px;
+    background: #fff;
+    -webkit-transition: background-color .3s ease-in-out;
+    transition: background-color .3s ease-in-out
+  }
+
+  &__close:focus {
+    outline: 0;
+    background-color: $brilliant-azure;
+  }
+
+  &__close:active {
+    background-color: $brilliant-azure
+  }
+}
+
+.modal-overlay--visible {
+  visibility: visible;
+  opacity: 1;
+  transition: .5s ease-in-out
+}
+
+.modal--visible {
+  display: flex
+}
+
+.error {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 160%;
+  color: red;
+}

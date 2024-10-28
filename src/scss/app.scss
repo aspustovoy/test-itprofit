@@ -1,0 +1,12 @@
+/* Core variables */
+@use 'base/vars';
+
+/* CSS Reset */
+@use 'base/reset';
+
+/* Fonts */
+@use 'base/fonts';
+
+/* Page styles */
+@use 'styles';
+@use 'media.scss'

@@ -1,0 +1,62 @@
+{
+  "name": "test-seobility",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "aspustovoy",
+  "license": "ISC",
+  "description": "",
+  "browserslist": [
+    "last 2 versions",
+    "> 5%"
+  ],
+  "scripts": {
+    "dev": "webpack serve --config configuration/webpack.dev.config.js --mode=development",
+    "production": "webpack --config configuration/webpack.prod.config.js --mode=production",
+    "lint:sass": "sass-lint -v -q",
+    "lint:js": "eslint --ext .js src/js/",
+    "server": "node server/index.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "autoprefixer": "^10.4.0",
+    "babel-loader": "^9.2.1",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^12.0.2",
+    "css-loader": "^6.11.0",
+    "css-minimizer-webpack-plugin": "^7.0.0",
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb": "^19.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.27.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "html-webpack-plugin": "^5.5.0",
+    "image-minimizer-webpack-plugin": "^4.0.0",
+    "imagemin": "^9.0.0",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^10.0.1",
+    "mini-css-extract-plugin": "^2.4.4",
+    "sass": "^1.80.4",
+    "sass-lint": "^1.13.1",
+    "sass-loader": "^14.2.1",
+    "style-loader": "^4.0.0",
+    "terser-webpack-plugin": "^5.2.5",
+    "webpack": "^5.95.0",
+    "webpack-bundle-analyzer": "^4.5.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.2",
+    "webpack-merge": "^5.8.0"
+  },
+  "engines": {
+    "node": ">=18.12.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "inputmask": "^5.0.9",
+    "test-seobility": "file:"
+  }
+}
